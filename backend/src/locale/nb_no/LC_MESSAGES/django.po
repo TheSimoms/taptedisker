@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-19 20:20+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: course/apps.py:8 course/models.py:14 disc/models.py:10
+msgid "course"
+msgstr "bane"
+
+#: course/models.py:6
+msgid "name"
+msgstr "navn"
+
+#: course/models.py:7
+msgid "slug"
+msgstr "slug"
+
+#: course/models.py:9
+msgid "longitude"
+msgstr "lengdegrad"
+
+#: course/models.py:10
+msgid "latitude"
+msgstr "breddegrad"
+
+#: course/models.py:15
+msgid "courses"
+msgstr "baner"
+
+#: disc/apps.py:8 disc/models.py:23
+msgid "disc"
+msgstr "disk"
+
+#: disc/models.py:9
+msgid "user"
+msgstr "bruker"
+
+#: disc/models.py:24
+msgid "discs"
+msgstr "disker"
+
+#: taptedisker/settings.py:107
+msgid "Norwegian"
+msgstr "norsk"
+
+#: taptedisker/settings.py:108
+msgid "English"
+msgstr "engelsk"

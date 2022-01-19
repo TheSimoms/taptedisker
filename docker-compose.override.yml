@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      target: dev
+    environment:
+      DEBUG: "True"
+      HTTP_HOST: localhost
+      HTTP_PORT: "${HTTP_PORT:-8080}"
+      SECRET_KEY: super_secret_key
+      DB_HOST: database
+      DB_NAME: taptedisker
+      DB_USER: taptedisker
+      DB_PASSWORD: password
+    volumes:
+      - ./backend/src:/app/src
+  database:
+    environment:
+      POSTGRES_DB: taptedisker
+      POSTGRES_USER: taptedisker
+      POSTGRES_PASSWORD: password
