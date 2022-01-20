@@ -1,13 +1,21 @@
 version: "3.8"
 
 services:
+  frontend:
+    build:
+      target: base
+      args:
+        API_HOST: "${HTTP_SCHEME:-http}://${HTTP_HOST:-localhost}:${HTTP_PORT_BACKEND:-8000}"
+    volumes:
+      - ./frontend/src:/app/src
   backend:
     build:
-      target: dev
+      target: base
     environment:
       DEBUG: "True"
+      HTTP_SCHEME: http
       HTTP_HOST: localhost
-      HTTP_PORT: "${HTTP_PORT:-8080}"
+      HTTP_PORT: "${HTTP_PORT:-5000}"
       SECRET_KEY: super_secret_key
       DB_HOST: database
       DB_NAME: taptedisker
@@ -15,6 +23,18 @@ services:
       DB_PASSWORD: password
     volumes:
       - ./backend/src:/app/src
+  celery:
+    volumes:
+        - ./backend/src:/app/src
+    environment:
+      DEBUG: "True"
+      HTTP_HOST: localhost
+      HTTP_PORT: "${HTTP_PORT:-5000}"
+      SECRET_KEY: super_secret_key
+      DB_HOST: database
+      DB_NAME: taptedisker
+      DB_USER: taptedisker
+      DB_PASSWORD: password
   database:
     environment:
       POSTGRES_DB: taptedisker
