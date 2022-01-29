@@ -3,6 +3,7 @@
   import axios from "axios";
   import type { CourseDetails } from "./Api";
   import Loading from "../api/Loading.svelte";
+  import Map from "./Map.svelte";
 
   export let slug: string;
 
@@ -15,6 +16,8 @@
 	<Loading />
 {:then course}
   <h1>{course.name}</h1>
+
+  <Map {course} />
 {:catch}
   <p>{$_('fetch.error')}</p>
 {/await}

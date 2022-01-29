@@ -45,7 +45,7 @@ export default [
       copy({
         targets: [
           {
-            src: "node_modules/svelte-material-ui",
+            src: ["node_modules/svelte-material-ui", "node_modules/leaflet"],
             dest: "public/node_modules",
           },
         ],

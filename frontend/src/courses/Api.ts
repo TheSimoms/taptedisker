@@ -12,6 +12,6 @@ export interface CourseList {
 }
 
 export interface CourseDetails extends CourseList {
-  longitude: string;
-  latitude: string;
+  longitude: number;
+  latitude: number;
 }
